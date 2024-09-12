@@ -57,7 +57,6 @@ function WeatherWhisper() {
               poor planning, safety risks, and inefficiencies in various
               sectors.
             </Card.Text>
-
             <Card.Text style={{ marginTop: "5%" }}>
               <span
                 style={{
@@ -127,7 +126,6 @@ function WeatherWhisper() {
                 </Row>
               </Card.Text>
             </Card.Text>
-
             <Card.Text
               style={{
                 marginTop: "7%",
@@ -155,26 +153,41 @@ function WeatherWhisper() {
             </Card.Text>
 
             <div
+              className="d-flex justify-content-center align-items-center"
               style={{
-                position: "relative",
+                objectFit: "contain",
+                display: "flex",
+                flexDirection: "column",
                 width: "100%",
-                paddingTop: "56.25%",
+                maxWidth: "600px",
+                height: "400px",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden",
               }}
             >
-              <ReactPlayer
-                url="https://youtu.be/XVydrLcr-9c"
-                controls={true}
-                width="100%"
-                height="100%"
+              <div
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  border: "1px solid black",
+                  position: "relative",
+                  width: "100%",
+                  paddingTop: "56.25%",
                 }}
-              />
+              >
+                <ReactPlayer
+                  url="https://youtu.be/XVydrLcr-9c"
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    border: "1px solid black",
+                  }}
+                />
+              </div>
+              <p style={{ fontSize: "14px" }}>-Demonstration-</p>
             </div>
-            <p style={{ fontSize: "14px" }}>-Demonstration-</p>
 
             <Card.Text style={{ marginBottom: "5%" }}>
               <span
