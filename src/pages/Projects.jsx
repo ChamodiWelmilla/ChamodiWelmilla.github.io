@@ -119,7 +119,7 @@ function Projects() {
         }}
       >
         <img
-          src="/images/heartIcon.png"
+          src="/images/HeartIcon.png"
           alt="heart icon"
           style={{
             width: "200px",
