@@ -33,7 +33,6 @@ const projects = [
 
 function Home() {
   const typingEffectRef = useRef(null);
-  const isInView = useInView(typingEffectRef);
   const [isZoomedIn, setIsZoomedIn] = useState(false);
   const [showMiddleSection, setShowMiddleSection] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
@@ -380,34 +379,28 @@ function Home() {
                 marginRight: isMobile ? "0" : "20%",
               }}
             >
-              {isInView && (
-                <>
-                  Need a{" "}
-                  <TypingEffect
-                    text={[
-                      "Designer?",
-                      "Full Stack Developer?",
-                      "Blog Writer?",
-                    ]}
-                    speed={100}
-                    eraseSpeed={50}
-                    typingDelay={500}
-                    eraseDelay={2000}
-                    cursor={"|"}
-                    displayTextRenderer={(text, i) => (
-                      <span
-                        style={{
-                          fontFamily: "'Cinzel Decorative', cursive",
-                          fontWeight: 600,
-                          fontSize: "1.5rem",
-                        }}
-                      >
-                        {text}
-                      </span>
-                    )}
-                  />
-                </>
-              )}
+              <>
+                Need a{" "}
+                <TypingEffect
+                  text={["Designer?", "Full Stack Developer?", "Blog Writer?"]}
+                  speed={100}
+                  eraseSpeed={50}
+                  typingDelay={500}
+                  eraseDelay={2000}
+                  cursor={"|"}
+                  displayTextRenderer={(text, i) => (
+                    <span
+                      style={{
+                        fontFamily: "'Cinzel Decorative', cursive",
+                        fontWeight: 600,
+                        fontSize: "1.5rem",
+                      }}
+                    >
+                      {text}
+                    </span>
+                  )}
+                />
+              </>
               <br />
               <span
                 style={{
@@ -457,7 +450,7 @@ function Home() {
                     <Card
                       className="h-100 shadow scale-hover-effect project-card"
                       style={{
-                        opacity: projectsContentVisible ? 1 : 0, 
+                        opacity: projectsContentVisible ? 1 : 0,
                         transition: "opacity 0.5s ease-in-out",
                       }}
                     >
