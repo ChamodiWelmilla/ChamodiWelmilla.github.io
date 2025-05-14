@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { achievements } from "../data/Achievements";
+import AchievementSection from "../components/Achievements";
+import ExperienceSection from "../components/ExperienceSection";
+import { experiences } from "../data/Experience";
 
 function About() {
   const isMobile = window.innerWidth <= 768;
   const rolesRef = useRef(null);
   const [isZoomedIn, setIsZoomedIn] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     if (rolesRef.current) {
@@ -74,6 +80,31 @@ function About() {
     return () => observer.disconnect();
   }, []);
 
+  const experienceRef = useRef(null);
+
+  useEffect(() => {
+    const experienceItems =
+      experienceRef.current.querySelectorAll(".experience-item");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            entry.target.style.opacity = 1;
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    experienceItems.forEach((item) => {
+      item.style.opacity = 0;
+      observer.observe(item);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     const cardRef = document.querySelectorAll(".card-zoom");
     const observer = new IntersectionObserver(
@@ -92,6 +123,10 @@ function About() {
 
     return () => observer.disconnect();
   }, []);
+
+  const displayedAchievements = showAll
+    ? achievements
+    : achievements.slice(0, 2);
 
   return (
     <Container fluid className="contact-page" style={{ paddingTop: "3%" }}>
@@ -152,7 +187,12 @@ function About() {
           </div>
         </Col>
       </Row>
-
+      <div
+        ref={experienceRef}
+        style={{ backgroundColor: "#f8f8f8", padding: "2rem 0" }}
+      >
+        <ExperienceSection isMobile={isMobile} experiences={experiences} />
+      </div>
       <div>
         <Row
           style={{
@@ -208,7 +248,7 @@ function About() {
                 justifyContent: "flex-start",
                 marginBottom: "4rem",
                 position: "relative",
-                opacity: 0, // Initially hide the item
+                opacity: 0,
               }}
             >
               <div
@@ -222,7 +262,7 @@ function About() {
                   marginTop: "1rem",
                   left: "calc(50% - 7px)",
                   top: 0,
-                  opacity: 0, // Initially hide the dot
+                  opacity: 0,
                 }}
               ></div>
 
@@ -246,7 +286,7 @@ function About() {
                 className="col-md-6 col-lg-4 card-zoom"
                 style={{
                   animation: isZoomedIn ? "zoomIn 1.5s ease-out forwards" : "",
-                  opacity: 0, // Initially hide the image
+                  opacity: 0,
                 }}
               >
                 <img
@@ -254,8 +294,8 @@ function About() {
                   alt="University"
                   className="zoom-in"
                   style={{
-                    width: "100%",
-                    maxWidth: "40px",
+                    width: "120%",
+                    maxWidth: "55px",
                     height: "auto",
                     marginLeft: "1rem",
                   }}
@@ -271,7 +311,7 @@ function About() {
                 justifyContent: "flex-end",
                 marginBottom: "6rem",
                 position: "relative",
-                opacity: 0, // Initially hide the item
+                opacity: 0,
               }}
             >
               <div
@@ -285,7 +325,7 @@ function About() {
                   marginTop: isMobile ? "2rem" : "1rem",
                   left: "calc(50% - 7px)",
                   top: 0,
-                  opacity: 0, // Initially hide the dot
+                  opacity: 0,
                 }}
               ></div>
 
@@ -293,7 +333,7 @@ function About() {
                 className="col-md-6 col-lg-4 card-zoom"
                 style={{
                   animation: isZoomedIn ? "zoomIn 1.5s ease-out forwards" : "",
-                  opacity: 0, // Initially hide the image
+                  opacity: 0,
                 }}
               >
                 <img
@@ -305,7 +345,7 @@ function About() {
                     maxWidth: "40px",
                     height: "auto",
                     marginRight: "1rem",
-                    marginTop: isMobile? "-50%": "-4%",
+                    marginTop: isMobile ? "-50%" : "-4%",
                     marginLeft: isMobile ? "-3%" : "87%",
                   }}
                 />
@@ -319,7 +359,9 @@ function About() {
                   paddingLeft: "2rem",
                 }}
               >
-                <p style={{ fontSize: "20px", margin: 0 }}>Devi Balika Vidyalaya</p>
+                <p style={{ fontSize: "20px", margin: 0 }}>
+                  Devi Balika Vidyalaya
+                </p>
                 <span style={{ fontSize: "12px" }}>
                   GCE (A/L) 2019 <br /> GCE (O/L) : 2015
                 </span>
@@ -327,10 +369,10 @@ function About() {
             </div>
           </div>
         </Row>
-
-        
-              </div>
-
+      </div>
+      {/* <div>
+        <AchievementSection displayedAchievements={achievements} />
+      </div>{" "} */}
       <div style={{ backgroundColor: "#f8f8f8" }}>
         <p
           style={{
@@ -388,7 +430,7 @@ function About() {
                 height: "auto",
                 borderRadius: "50%",
                 marginBottom: "1rem",
-                opacity: 0, // Initially hide the image
+                opacity: 0,
               }}
             />
             <p
@@ -433,7 +475,7 @@ function About() {
                 height: "auto",
                 borderRadius: "50%",
                 marginBottom: "1rem",
-                opacity: 0, // Initially hide the image
+                opacity: 0,
               }}
             />
             <p
@@ -478,7 +520,7 @@ function About() {
                 height: "auto",
                 borderRadius: "50%",
                 marginBottom: "1rem",
-                opacity: 0, // Initially hide the image
+                opacity: 0,
               }}
             />
             <p
@@ -505,7 +547,6 @@ function About() {
           </div>
         </div>
       </div>
-
       <style jsx>{`
         @media (max-width: 768px) {
           .roles-container {
@@ -612,7 +653,7 @@ function About() {
           color: #53667d;
           transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
         }
-      `}</style>
+      `}</style>{" "}
     </Container>
   );
 }

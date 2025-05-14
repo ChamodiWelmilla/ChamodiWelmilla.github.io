@@ -8,7 +8,7 @@ function useInView(ref) {
       ([entry]) => setIsIntersecting(entry.isIntersecting),
       {
         rootMargin: "0px",
-        threshold: 0.1, // Trigger when 10% of the element is in view
+        threshold: 0.1, 
       }
     );
 

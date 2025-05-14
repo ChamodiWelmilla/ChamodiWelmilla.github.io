@@ -1,35 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
 import TypingEffect from "react-typing-effect";
 import useInView from "./useInView";
-
-const projects = [
-  {
-    id: 1,
-    title: "LorrySwap",
-    description:
-      "A Supply Management System for connecting truck drivers and sellers in economic centers.",
-    image: process.env.PUBLIC_URL + "/images/LorrySwapCover.png",
-    link: "/lorryswap",
-  },
-  {
-    id: 2,
-    title: "Weather Whisper",
-    description:
-      "Indoor weather station to receive observations, and display basic weather conditions through a mobile application.",
-    image: process.env.PUBLIC_URL + "/images/WeatherWhisperCover.png",
-    link: "/weatherwhisper",
-  },
-  {
-    id: 3,
-    title: "Garden Cleaning Tracker",
-    description:
-      "A system solution for efficient monitoring and management of maintenance process at University of Moratuwa.",
-    image: process.env.PUBLIC_URL + "/images/MaintainanceTrackerCover.png",
-    link: "/GardenCleaningTracker",
-  },
-];
+import ProjectSection from "../components/ProjectSection";
+import ProjectSectionData from "../data/ProjectSection";
 
 function Home() {
   const typingEffectRef = useRef(null);
@@ -42,14 +16,13 @@ function Home() {
   const [middleContentVisible, setMiddleContentVisible] = useState(false);
   const [projectsContentVisible, setProjectsContentVisible] = useState(false);
 
-  // Zoom-in animation effect when the section comes into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsZoomedIn(true);
-            setTimeout(() => setMiddleContentVisible(true), 1500); // Delay showing content after animation
+            setTimeout(() => setMiddleContentVisible(true), 1500);
           }
         });
       },
@@ -74,7 +47,7 @@ function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setShowMiddleSection(true);
-            setTimeout(() => setMiddleContentVisible(true), 1500); // Ensure content is shown after animation
+            setTimeout(() => setMiddleContentVisible(true), 1500);
           }
         });
       },
@@ -99,7 +72,7 @@ function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setShowProjects(true);
-            setTimeout(() => setProjectsContentVisible(true), 1500); // Ensure content is shown after animation
+            setTimeout(() => setProjectsContentVisible(true), 1500);
           }
         });
       },
@@ -125,7 +98,6 @@ function Home() {
         marginTop: isMobile ? "-25%" : "-10%",
       }}
     >
-      {/* Define keyframes for animations */}
       <style>
         {`
           @keyframes zoomIn {
@@ -365,7 +337,7 @@ function Home() {
             md={6}
             style={{
               animation: isZoomedIn ? "zoomIn 1.5s ease-out forwards" : "",
-              opacity: middleContentVisible ? 1 : 0, // Hide content until animation completes
+              opacity: middleContentVisible ? 1 : 0,
               transition: "opacity 0.5s ease-in-out",
             }}
           >
@@ -441,56 +413,7 @@ function Home() {
         }}
         ref={projectsSectionRef}
       >
-        <Row className="justify-content-center">
-          <Col xs={12}>
-            <Row className="g-4 justify-content-center my-5">
-              {projects.map((project) => (
-                <Col key={project.id} xs={12} md={6} lg={4}>
-                  <Link to={project.link} className="text-decoration-none">
-                    <Card
-                      className="h-100 shadow scale-hover-effect project-card"
-                      style={{
-                        opacity: projectsContentVisible ? 1 : 0,
-                        transition: "opacity 0.5s ease-in-out",
-                      }}
-                    >
-                      <Card.Img
-                        variant="top"
-                        src={project.image}
-                        alt={project.title}
-                        className="card-image"
-                      />
-                      <Card.Body className="p-4">
-                        <Card.Title>{project.title}</Card.Title>
-                        <Card.Text>{project.description}</Card.Text>
-                      </Card.Body>
-                      <div className="overlay">
-                        <span className="see-more-text">Explore More</span>
-                      </div>
-                    </Card>
-                  </Link>
-                </Col>
-              ))}
-            </Row>
-            <Row className="justify-content-center mt-4">
-              <Col xs="auto">
-                <Link to="/projects">
-                  <Button
-                    style={{
-                      fontWeight: "initial",
-                      backgroundColor: "#3C3D37",
-                      border: "none",
-                      width: "200px",
-                      fontSize: "1rem",
-                    }}
-                  >
-                    Find More
-                  </Button>
-                </Link>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+        <ProjectSection projects={ProjectSectionData} />
       </Container>
     </div>
   );

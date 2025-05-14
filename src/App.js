@@ -31,7 +31,7 @@ function App() {
       <footer>
         <div className="container my-5">
           <div className="container">
-            <p className="p-3 m-0 text-center">@2024 WelmillaCN</p>
+            <p className="p-3 m-0 text-center">@2025 WelmillaCN</p>
           </div>
         </div>
       </footer>

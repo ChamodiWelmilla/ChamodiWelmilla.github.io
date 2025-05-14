@@ -28,10 +28,10 @@ const projects = [
   },
   {
     id: 4,
-    title: "Supply Chain System",
+    title: "IEEE WIE UoM Web Portal",
     description: "Integrated Supply Chain System for ColourPlus Pvt (Ltd).",
     image: process.env.PUBLIC_URL + "/images/ManagementSystemCover.png",
-    link: "/ManagementSystem",
+    link: "/WIEWebPortal",
   },
   {
     id: 5,
@@ -49,26 +49,39 @@ const projects = [
     image: process.env.PUBLIC_URL + "/images/InternifyCover.png",
     link: "/Internify",
   },
+  {
+    id: 7,
+    title: "MoveMate",
+    description: "A mobile application to explore available flights.",
+    image: process.env.PUBLIC_URL + "/images/MoveMateCover.jpg",
+    link: "/MoveMate",
+  },
+  {
+    id: 8,
+    title: "Lolz",
+    description:
+      "A mobile application that displays jokes based on the user's selected category, offering a personalized and engaging experience.",
+    image: process.env.PUBLIC_URL + "/images/LolzCover.jpg",
+    link: "/Lolz",
+  },
 ];
 
-// Separate ProjectCard component to handle each card's logic
 function ProjectCard({ project }) {
   const [isZoomedIn, setIsZoomedIn] = useState(false);
   const cardRef = useRef(null);
   const isMobile = window.innerWidth <= 768;
 
-  // Observe each card for the zoom-in animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsZoomedIn(true);
-            observer.unobserve(cardRef.current); // Unobserve to avoid multiple triggers
+            observer.unobserve(cardRef.current);
           }
         });
       },
-      { threshold: 0.2 } // 20% of the card should be visible
+      { threshold: 0.2 } 
     );
 
     if (cardRef.current) {
