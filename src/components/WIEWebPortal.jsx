@@ -31,8 +31,8 @@ function WIEWebPortal() {
           </Card.Title>
           <Card.Img
             variant="top"
-            src={process.env.PUBLIC_URL + "/images/Lolz.jpg"}
-            alt="Lolz"
+            src={process.env.PUBLIC_URL + "/images/WIE.jpg"}
+            alt="IEEE WIE UoM Web Portal"
             style={{
               objectFit: "cover",
               display: "block",

@@ -10,7 +10,6 @@ import Atelier from "../components/Atelier";
 import GardenCleaningTracker from "../components/GardenCleaningTracker";
 import WIEWebPortal from "../components/WIEWebPortal";
 import Internify from "../components/Internify";
-import ManagementSystem from "../components/SupplyChainSystem";
 import MoveMate from "../components/MoveMate";
 import Lolz from "../components/Lolz";
 import ScrollToTop from "../components/ScrollToTop";
@@ -34,7 +33,6 @@ const AppRoutes = () => {
         />
         <Route path="/WIEWebPortal" element={<WIEWebPortal />} />
         <Route path="/Internify" element={<Internify />} />
-        <Route path="/managementSystem" element={<ManagementSystem />} />
         <Route path="/MoveMate" element={<MoveMate />} />
         <Route path="/Lolz" element={<Lolz />} />
         <Route path="*" element={<NotFound />} /> 

@@ -29,8 +29,9 @@ const projects = [
   {
     id: 4,
     title: "IEEE WIE UoM Web Portal",
-    description: "Integrated Supply Chain System for ColourPlus Pvt (Ltd).",
-    image: process.env.PUBLIC_URL + "/images/ManagementSystemCover.png",
+    description:
+      "An official website for the IEEE WIE Student Branch Affinity Group at the University of Moratuwa.",
+    image: process.env.PUBLIC_URL + "/images/WIECover.jpg",
     link: "/WIEWebPortal",
   },
   {
