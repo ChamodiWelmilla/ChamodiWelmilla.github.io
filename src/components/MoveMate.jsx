@@ -54,7 +54,7 @@ function MoveMate() {
                 Problem Addressed{" "}
               </span>{" "}
               <br />
-              Certainly! Here's a more professional version: --- The app solves
+              MoveMate solves
               the problem of users being unable to easily access information on
               available flights and airlines to specific destinations. It offers
               a streamlined solution for viewing and exploring flight plans,

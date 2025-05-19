@@ -168,7 +168,7 @@ function Lolz() {
                   fontWeight: "bold",
                 }}
               >
-                Dart:{" "}
+                Flutter:{" "}
               </span>
               For building the cross-platform mobile application. <br /> <br />
             </Card.Text>
