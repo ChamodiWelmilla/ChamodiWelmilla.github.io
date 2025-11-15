@@ -2,9 +2,8 @@ import React from "react";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
 import ReactPlayer from "react-player/youtube";
 
-function WIEWebPortal() {
+function MythicEcology() {
   const isMobile = window.innerWidth <= 768;
-
   return (
     <div
       style={{
@@ -27,18 +26,17 @@ function WIEWebPortal() {
               marginTop: "2%",
             }}
           >
-            IEEE WIE UoM Web Portal
+            Mythic Ecology
           </Card.Title>
           <Card.Img
             variant="top"
-            src={process.env.PUBLIC_URL + "/images/WIE.jpg"}
-            alt="IEEE WIE UoM Web Portal"
+            src={process.env.PUBLIC_URL + "/images/MythicEcology.png"}
+            alt="Mythic Ecology"
             style={{
               objectFit: "cover",
               display: "block",
               margin: "0 auto",
               marginTop: "5%",
-              height: "auto",
               maxWidth: isMobile ? "100%" : "50%",
             }}
           />
@@ -54,16 +52,17 @@ function WIEWebPortal() {
                 Problem Addressed{" "}
               </span>{" "}
               <br />
-              The IEEE WIE Student Branch at the University of Moratuwa lacked a
-              centralized and dynamic online presence to showcase its
-              initiatives, achievements, and opportunities. This made it
-              challenging for members, collaborators, and prospective
-              participants to stay updated or access important resources. The
-              official website bridges that gap by offering a centralized,
-              accessible, and engaging platform to represent WIE's identity and
-              activities effectively.
+              In the complex, data-rich world of fantasy settings, creators, and
+              game masters face a major challenge in maintaining consistency,
+              predicting outcomes, and planning narrative elements. There is a
+              lack of a centralized, rule-based computational system to manage
+              the classification, relationships, and vulnerabilities of
+              fictional magical creatures, artifacts, and arcane rituals. This
+              makes it difficult to maintain world coherence, balance threat
+              levels, and consistently derive logical countermeasure strategies
+              or successful ritual plans based on established ecological and
+              magical rules.
             </Card.Text>
-
             <Card.Text
               style={{
                 marginTop: "7%",
@@ -88,11 +87,12 @@ function WIEWebPortal() {
                   fontWeight: "bold",
                 }}
               >
-                i. Centralized Information Hub:{" "}
+                i. Threat Analysis & Countermeasure Derivation:{" "}
               </span>
               <br />
-              Provides up-to-date details on events, initiatives, projects, and
-              committee members of IEEE WIE UoM.
+              Provides instant, rule-based countermeasure strategies for any
+              cataloged creature, automatically calculating threat level and
+              primary weaknesses.
               <br /> <br />
               <span
                 style={{
@@ -100,11 +100,13 @@ function WIEWebPortal() {
                   fontWeight: "bold",
                 }}
               >
-                ii. Member Recognition:{" "}
+                ii. Dynamic Ritual Success Scoring:{" "}
               </span>
               <br />
-              Highlights member achievements, awards, and contributions to
-              foster motivation and visibility.
+              Calculates the numerical success probability (0-100%) for any
+              ritual by analyzing the complex compatibility between the ritual's
+              alignment, the location's influence, the moon phase's boost, and
+              the availability of the required artifacts.
               <br /> <br />
               <span
                 style={{
@@ -112,11 +114,12 @@ function WIEWebPortal() {
                   fontWeight: "bold",
                 }}
               >
-                iii. Event Showcases:{" "}
+                iii. Creature Relationship Discovery:{" "}
               </span>
               <br />
-              Features past and upcoming events with image galleries, write-ups,
-              and quick access to registration links.
+              Allows users to query the database to discover creature
+              co-dependencies and relationships by filtering entities across
+              multiple attributes (Habitat, Alignment, Threat Level).
               <span
                 style={{
                   fontSize: "1rem",
@@ -125,11 +128,12 @@ function WIEWebPortal() {
               >
                 <br />
                 <br />
-                iv. Seamless Navigation:{" "}
+                iv. Structured Ritual Planning:{" "}
               </span>
               <br />
-              Designed with a responsive and intuitive layout for easy browsing
-              across all devices.
+              Generates a step-by-step execution plan for a ritual, including
+              required ingredients, environmental checks, and necessary threat
+              mitigation steps for local entities.
               <br />
               <br />
               <span
@@ -138,13 +142,49 @@ function WIEWebPortal() {
                   fontWeight: "bold",
                 }}
               >
-                v. Collaboration Ready:{" "}
+                v. Scalable and Secure Logic:{" "}
               </span>
               <br />
-              Offers contact details, partnership opportunities, and forms for
-              those interested in working with the WIE community.
+              Separates core rule logic into a robust Python backend, ensuring
+              data integrity and consistency across all front-end queries.
               <br />
             </Card.Text>
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{
+                objectFit: "contain",
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
+                maxWidth: "600px",
+                height: "400px",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  paddingTop: "56.25%",
+                }}
+              >
+                <ReactPlayer
+                  url="https://youtu.be/v3I6Hrp2p9w"
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    border: "1px solid black",
+                  }}
+                />
+              </div>
+              <p style={{ fontSize: "14px" }}>-Demonstration-</p>
+            </div>
 
             <Card.Text
               style={{
@@ -170,47 +210,22 @@ function WIEWebPortal() {
                   fontWeight: "bold",
                 }}
               >
-                React:{" "}
+                Frontend:{" "}
               </span>
-              For building the cross-platform mobile application. <br /> <br />
-            </Card.Text>
-
-            {/* <div
-              className="d-flex justify-content-center align-items-center"
-              style={{
-                objectFit: "contain",
-                display: "flex",
-                flexDirection: "column",
-                width: "100%",
-                maxWidth: "600px",
-                height: "400px",
-                justifyContent: "center",
-                alignItems: "center",
-                overflow: "hidden",
-              }}
-            >
-              <div
+              HTML, CSS, and JavaScript utilizing the native Fetch API to send
+              requests to the Flask backend and dynamically update the User
+              Interface (UI) with the calculated results <br /> <br />
+              <span
                 style={{
-                  position: "relative",
-                  width: "100%",
-                  paddingTop: "56.25%",
+                  fontSize: "1rem",
+                  fontWeight: "bold",
                 }}
               >
-                <ReactPlayer
-                  url="https://youtube.com/shorts/ubXhwlgs6y4?feature=share"
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    border: "1px solid black",
-                  }}
-                />
-              </div>
-              <p style={{ fontSize: "14px" }}>-Demonstration-</p>
-            </div> */}
+                Backend:{" "}
+              </span>
+              Python with the Flask framework, providing a lightweight RESTful
+              API to execute complex logic and calculations. <br /> <br />
+            </Card.Text>
           </Card.Body>
         </Card>
       </Container>
@@ -218,4 +233,4 @@ function WIEWebPortal() {
   );
 }
 
-export default WIEWebPortal;
+export default MythicEcology;

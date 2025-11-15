@@ -28,11 +28,11 @@ const projects = [
   },
   {
     id: 4,
-    title: "IEEE WIE UoM Web Portal",
+    title: "Mythic Ecology",
     description:
-      "An official website for the IEEE WIE Student Branch Affinity Group at the University of Moratuwa.",
-    image: process.env.PUBLIC_URL + "/images/WIECover.jpg",
-    link: "/WIEWebPortal",
+      "A core application for managing, analyzing, and providing data-driven insights into the magical ecology of a structured fantasy world.",
+    image: process.env.PUBLIC_URL + "/images/MythicEcologyCover.jpg",
+    link: "/MythicEcology",
   },
   {
     id: 5,

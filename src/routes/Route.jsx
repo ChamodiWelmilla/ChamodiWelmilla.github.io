@@ -8,7 +8,7 @@ import LorrySwap from "../components/LorrySwap";
 import WeatherWhisper from "../components/WeatherWhisper";
 import Atelier from "../components/Atelier";
 import GardenCleaningTracker from "../components/GardenCleaningTracker";
-import WIEWebPortal from "../components/WIEWebPortal";
+import MythicEcology from "../components/MythicEcology";
 import Internify from "../components/Internify";
 import MoveMate from "../components/MoveMate";
 import Lolz from "../components/Lolz";
@@ -31,7 +31,7 @@ const AppRoutes = () => {
           path="/gardenCleaningTracker"
           element={<GardenCleaningTracker />}
         />
-        <Route path="/WIEWebPortal" element={<WIEWebPortal />} />
+        <Route path="/MythicEcology" element={<MythicEcology />} />
         <Route path="/Internify" element={<Internify />} />
         <Route path="/MoveMate" element={<MoveMate />} />
         <Route path="/Lolz" element={<Lolz />} />
