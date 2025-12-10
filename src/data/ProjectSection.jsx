@@ -9,11 +9,11 @@ const ProjectSectionData = [
   },
   {
     id: 2,
-    title: "Weather Whisper",
+    title: "Popcorn Pick",
     description:
-      "Indoor weather station to receive observations, and display basic weather conditions through a mobile application.",
-    image: process.env.PUBLIC_URL + "/images/WeatherWhisperCover.png",
-    link: "/weatherwhisper",
+      "A personalized application for recommending movies through content‑based filtering and delivering interactive, data‑driven suggestions.",
+    image: process.env.PUBLIC_URL + "/images/PopcornPickCover.png",
+    link: "/popcornpick",
   },
   {
     id: 3,

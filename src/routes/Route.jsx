@@ -13,6 +13,7 @@ import Internify from "../components/Internify";
 import MoveMate from "../components/MoveMate";
 import Lolz from "../components/Lolz";
 import ScrollToTop from "../components/ScrollToTop";
+import PopcornPick from "../components/PopcornPick";
 import NotFound from "../components/NotFound";
 
 const AppRoutes = () => {
@@ -27,6 +28,7 @@ const AppRoutes = () => {
         <Route path="/lorryswap" element={<LorrySwap />} />
         <Route path="/weatherwhisper" element={<WeatherWhisper />} />
         <Route path="/atelier" element={<Atelier />} />
+        <Route path="/popcornpick" element={<PopcornPick />} />
         <Route
           path="/gardenCleaningTracker"
           element={<GardenCleaningTracker />}

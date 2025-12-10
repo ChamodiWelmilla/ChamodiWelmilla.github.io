@@ -13,6 +13,14 @@ const projects = [
   },
   {
     id: 2,
+    title: "Popcorn Pick",
+    description:
+      "A personalized application for recommending movies through content‑based filtering and delivering interactive, data‑driven suggestions.",
+    image: process.env.PUBLIC_URL + "/images/PopcornPickCover.png",
+    link: "/popcornpick",
+  },
+  {
+    id: 3,
     title: "Weather Whisper",
     description:
       "Indoor weather station to receive observations, and display basic weather conditions through a mobile application.",
@@ -20,14 +28,14 @@ const projects = [
     link: "/weatherwhisper",
   },
   {
-    id: 3,
+    id: 4,
     title: "WelmillaCN Atelier",
     description: "A portfolio website to showcase my projects and skills.",
     image: process.env.PUBLIC_URL + "/images/PortfolioCover.png",
     link: "/atelier",
   },
   {
-    id: 4,
+    id: 5,
     title: "Mythic Ecology",
     description:
       "A core application for managing, analyzing, and providing data-driven insights into the magical ecology of a structured fantasy world.",
@@ -35,7 +43,7 @@ const projects = [
     link: "/MythicEcology",
   },
   {
-    id: 5,
+    id: 6,
     title: "Garden Cleaning Tracker",
     description:
       "A system solution for efficient monitoring and management of maintenance process at University of Moratuwa.",
@@ -43,7 +51,7 @@ const projects = [
     link: "/GardenCleaningTracker",
   },
   {
-    id: 6,
+    id: 7,
     title: "Internify",
     description:
       "A CV tracking system for the Faculty of Information Technology at the University of Moratuwa.",
@@ -51,14 +59,14 @@ const projects = [
     link: "/Internify",
   },
   {
-    id: 7,
+    id: 8,
     title: "MoveMate",
     description: "A mobile application to explore available flights.",
     image: process.env.PUBLIC_URL + "/images/MoveMateCover.jpg",
     link: "/MoveMate",
   },
   {
-    id: 8,
+    id: 9,
     title: "Lolz",
     description:
       "A mobile application that displays jokes based on the user's selected category, offering a personalized and engaging experience.",

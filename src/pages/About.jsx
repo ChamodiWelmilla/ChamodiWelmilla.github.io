@@ -176,7 +176,7 @@ function About() {
                 alignItems: "center",
               }}
             >
-              I am a third-year Information Technology undergraduate in Sri
+              I am a final-year Information Technology undergraduate in Sri
               Lanka,
               <br />
               currently building a strong foundation in IT systems, programming,
