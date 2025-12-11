@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
+    title: "FaceSync",
+    description:
+      "An automated attendance system using face recognition to ensure accurate, real‑time identity verification.",
+    image: process.env.PUBLIC_URL + "/images/FaceSyncCover.png",
+    link: "/faceSync",
+  },
+  {
+    id: 1,
     title: "LorrySwap",
     description:
       "A Supply Management System for connecting truck drivers and sellers in economic centers.",

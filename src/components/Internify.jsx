@@ -105,22 +105,6 @@ function Internify() {
                       -Final Product-
                     </p>
                   </Col>
-                  <Col
-                    xs={12}
-                    md={6}
-                    lg={5}
-                    className="d-flex flex-column align-items-center"
-                  >
-                    <a
-                      href="https://www.internify.fit/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ marginTop: isMobile ? "5%" : "27%" }}
-                    >
-                      {" "}
-                      View site{" "}
-                    </a>
-                  </Col>
                 </Row>
               </Card.Text>
             </Card.Text>

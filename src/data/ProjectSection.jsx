@@ -1,6 +1,14 @@
 const ProjectSectionData = [
   {
     id: 1,
+    title: "FaceSync",
+    description:
+      "An automated attendance system using face recognition to ensure accurate, real‑time identity verification.",
+    image: process.env.PUBLIC_URL + "/images/FaceSyncCover.png",
+    link: "/facesync",
+  },
+  {
+    id: 2,
     title: "LorrySwap",
     description:
       "A Supply Management System for connecting truck drivers and sellers in economic centers.",
@@ -8,20 +16,12 @@ const ProjectSectionData = [
     link: "/lorryswap",
   },
   {
-    id: 2,
+    id: 3,
     title: "Popcorn Pick",
     description:
       "A personalized application for recommending movies through content‑based filtering and delivering interactive, data‑driven suggestions.",
     image: process.env.PUBLIC_URL + "/images/PopcornPickCover.png",
     link: "/popcornpick",
-  },
-  {
-    id: 3,
-    title: "Garden Cleaning Tracker",
-    description:
-      "A system solution for efficient monitoring and management of maintenance process at University of Moratuwa.",
-    image: process.env.PUBLIC_URL + "/images/MaintainanceTrackerCover.png",
-    link: "/GardenCleaningTracker",
   },
 ];
 
