@@ -9,19 +9,19 @@ const ProjectSectionData = [
   },
   {
     id: 2,
+    title: "FloodSense",
+    description:
+      "A real-time flood monitoring system that provides early warnings and alerts to communities at risk.",
+    image: process.env.PUBLIC_URL + "/images/FloodSenseCover.png",
+    link: "/floodsense",
+  },
+  {
+    id: 3,
     title: "LorrySwap",
     description:
       "A Supply Management System for connecting truck drivers and sellers in economic centers.",
     image: process.env.PUBLIC_URL + "/images/LorrySwapCover.png",
     link: "/lorryswap",
-  },
-  {
-    id: 3,
-    title: "Popcorn Pick",
-    description:
-      "A personalized application for recommending movies through content‑based filtering and delivering interactive, data‑driven suggestions.",
-    image: process.env.PUBLIC_URL + "/images/PopcornPickCover.png",
-    link: "/popcornpick",
   },
 ];
 

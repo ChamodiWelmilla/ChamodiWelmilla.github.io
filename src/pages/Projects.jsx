@@ -12,7 +12,15 @@ const projects = [
     link: "/faceSync",
   },
   {
-    id: 1,
+    id: 2,
+    title: "FloodSense",
+    description:
+      "A real-time flood monitoring system that provides early warnings and alerts to communities at risk.",
+    image: process.env.PUBLIC_URL + "/images/FloodSenseCover.png",
+    link: "/floodsense",
+  },
+  {
+    id: 3,
     title: "LorrySwap",
     description:
       "A Supply Management System for connecting truck drivers and sellers in economic centers.",
@@ -20,7 +28,7 @@ const projects = [
     link: "/lorryswap",
   },
   {
-    id: 2,
+    id: 4,
     title: "Popcorn Pick",
     description:
       "A personalized application for recommending movies through content‑based filtering and delivering interactive, data‑driven suggestions.",
@@ -28,7 +36,7 @@ const projects = [
     link: "/popcornpick",
   },
   {
-    id: 3,
+    id: 5,
     title: "Weather Whisper",
     description:
       "Indoor weather station to receive observations, and display basic weather conditions through a mobile application.",
@@ -36,14 +44,14 @@ const projects = [
     link: "/weatherwhisper",
   },
   {
-    id: 4,
+    id: 6,
     title: "WelmillaCN Atelier",
     description: "A portfolio website to showcase my projects and skills.",
     image: process.env.PUBLIC_URL + "/images/PortfolioCover.png",
     link: "/atelier",
   },
   {
-    id: 5,
+    id: 7,
     title: "Mythic Ecology",
     description:
       "A core application for managing, analyzing, and providing data-driven insights into the magical ecology of a structured fantasy world.",
@@ -51,7 +59,7 @@ const projects = [
     link: "/MythicEcology",
   },
   {
-    id: 6,
+    id: 8,
     title: "Garden Cleaning Tracker",
     description:
       "A system solution for efficient monitoring and management of maintenance process at University of Moratuwa.",
@@ -59,7 +67,7 @@ const projects = [
     link: "/GardenCleaningTracker",
   },
   {
-    id: 7,
+    id: 9,
     title: "Internify",
     description:
       "A CV tracking system for the Faculty of Information Technology at the University of Moratuwa.",
@@ -67,14 +75,14 @@ const projects = [
     link: "/Internify",
   },
   {
-    id: 8,
+    id: 10,
     title: "MoveMate",
     description: "A mobile application to explore available flights.",
     image: process.env.PUBLIC_URL + "/images/MoveMateCover.jpg",
     link: "/MoveMate",
   },
   {
-    id: 9,
+    id: 11,
     title: "Lolz",
     description:
       "A mobile application that displays jokes based on the user's selected category, offering a personalized and engaging experience.",

@@ -15,6 +15,7 @@ import Lolz from "../components/Lolz";
 import ScrollToTop from "../components/ScrollToTop";
 import PopcornPick from "../components/PopcornPick";
 import FaceSync from "../components/FaceSync";
+import FloodSense from "../components/FloodSense";
 import NotFound from "../components/NotFound";
 
 const AppRoutes = () => {
@@ -31,6 +32,7 @@ const AppRoutes = () => {
         <Route path="/atelier" element={<Atelier />} />
         <Route path="/popcornpick" element={<PopcornPick />} />
         <Route path="/facesync" element={<FaceSync />} />
+        <Route path="/floodsense" element={<FloodSense />} />
         <Route
           path="/gardenCleaningTracker"
           element={<GardenCleaningTracker />}
