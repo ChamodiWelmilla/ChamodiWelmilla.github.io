@@ -219,38 +219,17 @@ function FloodSense() {
               </div>
 
               <span style={{ fontSize: "1rem", fontWeight: "bold" }}>
-                Data Science & Modeling:
+                Frontend:
               </span>
-              Python (flood prediction, preprocessing, and analysis)
+              Streamlit framework for interactive dashboards, flood visualization, and real-time monitoring updates
               <br />
               <br />
 
               <span style={{ fontSize: "1rem", fontWeight: "bold" }}>
-                Notebook-Based Development:
+                Backend:
               </span>
-              Jupyter Notebook (experimentation, model evaluation, and
-              visualization)
+              Python with Pandas, NumPy, and scikit-learn for data preprocessing, flood prediction, and risk analysis
               <br />
-              <br />
-
-              <span style={{ fontSize: "1rem", fontWeight: "bold" }}>
-                Backend/Integration:
-              </span>
-              Python-based APIs/services
-              <br />
-              <br />
-
-              <span style={{ fontSize: "1rem", fontWeight: "bold" }}>
-                Data Storage:
-              </span>
-              Structured datasets for hydrological and weather-related records
-              <br />
-              <br />
-
-              <span style={{ fontSize: "1rem", fontWeight: "bold" }}>
-                Deployment/Scalability:
-              </span>
-              Cloud-ready architecture for continuous monitoring and alerts
               <br />
             </Card.Text>
           </Card.Body>
