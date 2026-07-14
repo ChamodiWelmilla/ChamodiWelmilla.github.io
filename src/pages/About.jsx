@@ -176,13 +176,10 @@ function About() {
                 alignItems: "center",
               }}
             >
-              I am a final-year Information Technology undergraduate in Sri
-              Lanka,
-              <br />
-              currently building a strong foundation in IT systems, programming,
-              and technical problem-solving. <br />I am committed to applying my
-              knowledge in practical settings <br /> and continually enhancing
-              my expertise in the ever-evolving tech industry.
+              A fresh graduate in Software Engineering specializing in backend architecture, distributed systems, and the complete
+SDLC. <br /> Enterprise-proven through hands-on experience at Creative Software building scalable backend architectures and
+robust CI/CD pipelines. <br />  Passionate about clean code, resilient system design, and integrating cutting-edge research and
+machine learning to deliver high-quality, production-ready software.
             </p>
           </div>
         </Col>
@@ -278,7 +275,7 @@ function About() {
                   University of Moratuwa
                 </p>
                 <span style={{ fontSize: "12px" }}>
-                  Expected Graduation: 2026 <br /> SGPA: 3.69 (L2S1)
+                  2022- 2026 <br /> 
                 </span>
               </div>
 
