@@ -18,6 +18,7 @@ import FaceSync from "../components/FaceSync";
 import FloodSense from "../components/FloodSense";
 import TrustMetrics from "../components/TrustMetrics";
 import NotFound from "../components/NotFound";
+import CardioVision from "../components/CardioVision";
 
 const AppRoutes = () => {
   return (
@@ -43,6 +44,7 @@ const AppRoutes = () => {
         <Route path="/Internify" element={<Internify />} />
         <Route path="/MoveMate" element={<MoveMate />} />
         <Route path="/Lolz" element={<Lolz />} />
+        <Route path="/cardiovision" element={<CardioVision />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
     </>

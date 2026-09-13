@@ -37,11 +37,11 @@ const projects = [
   },
   {
     id: 5,
-    title: "TrustMetrics",
+    title: "Garden Cleaning Tracker",
     description:
-      "A comprehensive platform for evaluating and improving trustworthiness in digital interactions.",
-    image: process.env.PUBLIC_URL + "/images/TrustMetricsCover.png",
-    link: "/trustmetrics",
+      "A system solution for efficient monitoring and management of maintenance process at University of Moratuwa.",
+    image: process.env.PUBLIC_URL + "/images/MaintainanceTrackerCover.png",
+    link: "/GardenCleaningTracker",
   },
   {
     id: 6,
@@ -53,13 +53,6 @@ const projects = [
   },
   {
     id: 7,
-    title: "WelmillaCN Atelier",
-    description: "A portfolio website to showcase my projects and skills.",
-    image: process.env.PUBLIC_URL + "/images/PortfolioCover.png",
-    link: "/atelier",
-  },
-  {
-    id: 8,
     title: "Mythic Ecology",
     description:
       "A core application for managing, analyzing, and providing data-driven insights into the magical ecology of a structured fantasy world.",
@@ -67,12 +60,20 @@ const projects = [
     link: "/MythicEcology",
   },
   {
-    id: 9,
-    title: "Garden Cleaning Tracker",
+    id: 8,
+    title: "CardioVision",
     description:
-      "A system solution for efficient monitoring and management of maintenance process at University of Moratuwa.",
-    image: process.env.PUBLIC_URL + "/images/MaintainanceTrackerCover.png",
-    link: "/GardenCleaningTracker",
+      "A real-time cardiovascular risk assessment system using machine learning to ensure accurate, proactive health insights.",
+    image: process.env.PUBLIC_URL + "/images/CardioVision.png",
+    link: "/cardiovision",
+  },
+  {
+    id: 9,
+    title: "TrustMetrics",
+    description:
+      "A comprehensive platform for evaluating and improving trustworthiness in digital interactions.",
+    image: process.env.PUBLIC_URL + "/images/TrustMetricsCover.png",
+    link: "/trustmetrics",
   },
   {
     id: 10,
@@ -84,13 +85,20 @@ const projects = [
   },
   {
     id: 11,
+    title: "WelmillaCN Atelier",
+    description: "A portfolio website to showcase my projects and skills.",
+    image: process.env.PUBLIC_URL + "/images/PortfolioCover.png",
+    link: "/atelier",
+  },
+  {
+    id: 12,
     title: "MoveMate",
     description: "A mobile application to explore available flights.",
     image: process.env.PUBLIC_URL + "/images/MoveMateCover.jpg",
     link: "/MoveMate",
   },
   {
-    id: 12,
+    id: 13,
     title: "Lolz",
     description:
       "A mobile application that displays jokes based on the user's selected category, offering a personalized and engaging experience.",
