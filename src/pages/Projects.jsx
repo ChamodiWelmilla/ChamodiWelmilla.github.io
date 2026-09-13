@@ -13,11 +13,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "FloodSense",
+    title: "Vibecheck",
     description:
-      "A real-time flood monitoring system that provides early warnings and alerts to communities at risk.",
-    image: process.env.PUBLIC_URL + "/images/FloodSenseCover.png",
-    link: "/floodsense",
+      "A deterministic verification framework that automatically audits LLM-generated workflows against formal specifications.",
+    image: process.env.PUBLIC_URL + "/images/VibeCheckCover.png",
+    link: "/vibecheck",
   },
   {
     id: 3,
@@ -53,6 +53,14 @@ const projects = [
   },
   {
     id: 7,
+    title: "FloodSense",
+    description:
+      "A real-time flood monitoring system that provides early warnings and alerts to communities at risk.",
+    image: process.env.PUBLIC_URL + "/images/FloodSenseCover.png",
+    link: "/floodsense",
+  },
+  {
+    id: 8,
     title: "Mythic Ecology",
     description:
       "A core application for managing, analyzing, and providing data-driven insights into the magical ecology of a structured fantasy world.",
@@ -60,7 +68,7 @@ const projects = [
     link: "/MythicEcology",
   },
   {
-    id: 8,
+    id: 9,
     title: "CardioVision",
     description:
       "A real-time cardiovascular risk assessment system using machine learning to ensure accurate, proactive health insights.",
@@ -68,7 +76,7 @@ const projects = [
     link: "/cardiovision",
   },
   {
-    id: 9,
+    id: 10,
     title: "TrustMetrics",
     description:
       "A comprehensive platform for evaluating and improving trustworthiness in digital interactions.",
@@ -76,7 +84,7 @@ const projects = [
     link: "/trustmetrics",
   },
   {
-    id: 10,
+    id: 11,
     title: "Internify",
     description:
       "A CV tracking system for the Faculty of Information Technology at the University of Moratuwa.",
@@ -84,21 +92,21 @@ const projects = [
     link: "/Internify",
   },
   {
-    id: 11,
+    id: 12,
     title: "WelmillaCN Atelier",
     description: "A portfolio website to showcase my projects and skills.",
     image: process.env.PUBLIC_URL + "/images/PortfolioCover.png",
     link: "/atelier",
   },
   {
-    id: 12,
+    id: 13,
     title: "MoveMate",
     description: "A mobile application to explore available flights.",
     image: process.env.PUBLIC_URL + "/images/MoveMateCover.jpg",
     link: "/MoveMate",
   },
   {
-    id: 13,
+    id: 14,
     title: "Lolz",
     description:
       "A mobile application that displays jokes based on the user's selected category, offering a personalized and engaging experience.",

@@ -19,6 +19,7 @@ import FloodSense from "../components/FloodSense";
 import TrustMetrics from "../components/TrustMetrics";
 import NotFound from "../components/NotFound";
 import CardioVision from "../components/CardioVision";
+import VibeCheck from "../components/VibeCheck";
 
 const AppRoutes = () => {
   return (
@@ -45,6 +46,7 @@ const AppRoutes = () => {
         <Route path="/MoveMate" element={<MoveMate />} />
         <Route path="/Lolz" element={<Lolz />} />
         <Route path="/cardiovision" element={<CardioVision />} />
+        <Route path="/vibecheck" element={<VibeCheck />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
     </>

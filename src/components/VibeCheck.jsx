@@ -1,8 +1,7 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
-import ReactPlayer from "react-player/youtube";
 
-function CardioVision() {
+function VibeCheck() {
   const isMobile = window.innerWidth <= 768;
 
   return (
@@ -27,12 +26,12 @@ function CardioVision() {
               marginTop: "2%",
             }}
           >
-            CardioVision
+            Vibecheck
           </Card.Title>
           <Card.Img
             variant="top"
-            src={process.env.PUBLIC_URL + "/images/CardioVision.png"}
-            alt="CardioVision"
+            src={process.env.PUBLIC_URL + "/images/VibeCheck.png"}
+            alt="Vibecheck"
             style={{
               objectFit: "cover",
               display: "block",
@@ -51,10 +50,34 @@ function CardioVision() {
                   fontFamily: "'Cinzel Decorative', cursive",
                 }}
               >
-                Problem Addressed
+                Problem Addressed{" "}
               </span>{" "}
               <br />
-              Traditional cardiovascular risk assessment often relies on rigid, manual evaluations that can overlook subtle patterns across different patient vitals. Healthcare providers and individuals need a fast, data-driven, and accessible solution that analyzes complex metrics in real-time to proactively identify health risks and encourage early intervention.
+              Validating that AI-generated code strictly adheres to business requirements is currently unpredictable, error-prone, and lacks formal guarantees. Organizations need a deterministic, evidence-backed verification framework that automatically audits LLM-generated workflows against formal specifications to detect hallucinations, ensure process alignment, and guarantee execution safety.
+            </Card.Text>
+
+            <Card.Text>
+              <span
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                  fontFamily: "'Cinzel Decorative', cursive",
+                }}
+              >
+                Solution Overview
+              </span>
+              <Card.Img
+                variant="top"
+                src={process.env.PUBLIC_URL + "/images/VibeCheckSolution.png"}
+                alt="Solution Overview"
+                style={{
+                  objectFit: "cover",
+                  display: "block",
+                  margin: "0 auto",
+                  marginTop: "3%",
+                  maxWidth: isMobile ? "100%" : "60%",
+                }}
+              />
             </Card.Text>
 
             <Card.Text
@@ -75,77 +98,42 @@ function CardioVision() {
               >
                 We Offer
               </div>
+              
               <span
                 style={{
                   fontSize: "1rem",
                   fontWeight: "bold",
                 }}
               >
-                i. AI‑Powered Clustering Analysis:{" "}
+                i. Automated Specification Extraction:{" "}
               </span>
               <br />
-              Utilizes unsupervised machine learning (K-Means) via scikit-learn to accurately categorize patient vitals into distinct cardiovascular risk profiles based on historical data.
+              Parses BPMN 2.0 XML specifications to automatically generate Finite Linear Temporal Logic (LTLf) properties, capturing intended business logic with mathematical rigor.
               <br /> <br />
+              
               <span
                 style={{
                   fontSize: "1rem",
                   fontWeight: "bold",
                 }}
               >
-                ii. Real‑Time Interactive Assessment:{" "}
+                ii. Multi-Modal Code Verification:{" "}
               </span>
               <br />
-              Provides a seamless user experience through a modern, responsive web interface, instantly translating complex medical data into clear, actionable health advice.
+              Employs an advanced three-layer engine utilizing Python AST analysis, Z3 symbolic execution, and dynamic tracing to deeply validate the behavior and feasible paths of generated code.
               <br /> <br />
+              
               <span
                 style={{
                   fontSize: "1rem",
                   fontWeight: "bold",
                 }}
               >
-                iii. Scalable Automated Backend:{" "}
+                iii. Formal Equivalence Checking:{" "}
               </span>
               <br />
-              Employs a robust Flask REST API to bridge the machine learning pipeline with the frontend, ensuring reliable data processing and seamless predictive reporting.
+              Utilizes the C++ SPOT library and NLP-driven semantic matching to reliably prove alignment between generated workflows and their source requirements, outputting a quantifiable compliance certificate.
             </Card.Text>
-
-            <div
-              className="d-flex justify-content-center align-items-center"
-              style={{
-                objectFit: "contain",
-                display: "flex",
-                flexDirection: "column",
-                width: "100%",
-                maxWidth: "600px",
-                height: "400px",
-                justifyContent: "center",
-                alignItems: "center",
-                overflow: "hidden",
-                marginTop: "2%"
-              }}
-            >
-              <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  paddingTop: "56.25%",
-                }}
-              >
-                <ReactPlayer
-                  url="https://youtu.be/_iKTSVxGju8"
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    border: "1px solid black",
-                  }}
-                />
-              </div>
-              <p style={{ fontSize: "14px", marginTop: "10px" }}>-Demonstration-</p>
-            </div>
 
             <Card.Text
               style={{
@@ -173,7 +161,7 @@ function CardioVision() {
               >
                 Frontend:{" "}
               </span>
-              HTML and Vanilla CSS for the web interface, served via Flask templates.
+              Streamlit for interactive verification dashboards, orchestration, and compliance reporting
               <br /> <br />
               
               <span
@@ -184,7 +172,7 @@ function CardioVision() {
               >
                 Backend:{" "}
               </span>
-              Python with Flask for the Web API, scikit-learn for K-Means clustering and data scaling, pandas for data processing, and joblib for model serialization.
+              Python (FastAPI, AST), C++ (SPOT, Pybind11), Z3 Theorem Prover, and Sentence-BERT for formal model checking and semantic classification
             </Card.Text>
           </Card.Body>
         </Card>
@@ -193,4 +181,4 @@ function CardioVision() {
   );
 }
 
-export default CardioVision;
+export default VibeCheck;

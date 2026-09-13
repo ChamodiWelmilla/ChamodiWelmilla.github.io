@@ -9,11 +9,11 @@ const ProjectSectionData = [
   },
   {
     id: 2,
-    title: "FloodSense",
+    title: "Vibecheck",
     description:
-      "A real-time flood monitoring system that provides early warnings and alerts to communities at risk.",
-    image: process.env.PUBLIC_URL + "/images/FloodSenseCover.png",
-    link: "/floodsense",
+      "A deterministic verification framework that automatically audits LLM-generated workflows against formal specifications.",
+    image: process.env.PUBLIC_URL + "/images/VibeCheckCover.png",
+    link: "/vibecheck",
   },
   {
     id: 3,
