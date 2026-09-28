@@ -1,11 +1,11 @@
 const ProjectSectionData = [
   {
     id: 1,
-    title: "FaceSync",
+    title: "Bidmesh",
     description:
-      "An automated attendance system using face recognition to ensure accurate, real‑time identity verification.",
-    image: process.env.PUBLIC_URL + "/images/FaceSyncCover.png",
-    link: "/facesync",
+      "A highly concurrent, microservices-based online auction platform designed for real-time engagement and strict data consistency.",
+    image: process.env.PUBLIC_URL + "/images/BidMesCover.png",
+    link: "/bidmesh",
   },
   {
     id: 2,
@@ -14,14 +14,14 @@ const ProjectSectionData = [
       "A deterministic verification framework that automatically audits LLM-generated workflows against formal specifications.",
     image: process.env.PUBLIC_URL + "/images/VibeCheckCover.png",
     link: "/vibecheck",
-  },
+  }, 
   {
     id: 3,
-    title: "LorrySwap",
+    title: "FaceSync",
     description:
-      "A Supply Management System for connecting truck drivers and sellers in economic centers.",
-    image: process.env.PUBLIC_URL + "/images/LorrySwapCover.png",
-    link: "/lorryswap",
+      "An automated attendance system using face recognition to ensure accurate, real‑time identity verification.",
+    image: process.env.PUBLIC_URL + "/images/FaceSyncCover.png",
+    link: "/facesync",
   },
 ];
 

@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
-    title: "FaceSync",
+    title: "Bidmesh",
     description:
-      "An automated attendance system using face recognition to ensure accurate, real‑time identity verification.",
-    image: process.env.PUBLIC_URL + "/images/FaceSyncCover.png",
-    link: "/faceSync",
+      "A highly concurrent, microservices-based online auction platform designed for real-time engagement and strict data consistency.",
+    image: process.env.PUBLIC_URL + "/images/BidMesCover.png",
+    link: "/bidmesh",
   },
   {
     id: 2,
@@ -18,9 +18,17 @@ const projects = [
       "A deterministic verification framework that automatically audits LLM-generated workflows against formal specifications.",
     image: process.env.PUBLIC_URL + "/images/VibeCheckCover.png",
     link: "/vibecheck",
-  },
+  }, 
   {
     id: 3,
+    title: "FaceSync",
+    description:
+      "An automated attendance system using face recognition to ensure accurate, real‑time identity verification.",
+    image: process.env.PUBLIC_URL + "/images/FaceSyncCover.png",
+    link: "/facesync",
+  },
+  {
+    id: 4,
     title: "LorrySwap",
     description:
       "A Supply Management System for connecting truck drivers and sellers in economic centers.",
@@ -28,7 +36,7 @@ const projects = [
     link: "/lorryswap",
   },
   {
-    id: 4,
+    id: 5,
     title: "Popcorn Pick",
     description:
       "A personalized application for recommending movies through content‑based filtering and delivering interactive, data‑driven suggestions.",
@@ -36,7 +44,7 @@ const projects = [
     link: "/popcornpick",
   },
   {
-    id: 5,
+    id: 6,
     title: "Garden Cleaning Tracker",
     description:
       "A system solution for efficient monitoring and management of maintenance process at University of Moratuwa.",
@@ -44,7 +52,7 @@ const projects = [
     link: "/GardenCleaningTracker",
   },
   {
-    id: 6,
+    id: 7,
     title: "Weather Whisper",
     description:
       "Indoor weather station to receive observations, and display basic weather conditions through a mobile application.",
@@ -52,7 +60,7 @@ const projects = [
     link: "/weatherwhisper",
   },
   {
-    id: 7,
+    id: 8,
     title: "FloodSense",
     description:
       "A real-time flood monitoring system that provides early warnings and alerts to communities at risk.",
@@ -60,7 +68,7 @@ const projects = [
     link: "/floodsense",
   },
   {
-    id: 8,
+    id: 9,
     title: "Mythic Ecology",
     description:
       "A core application for managing, analyzing, and providing data-driven insights into the magical ecology of a structured fantasy world.",
@@ -68,7 +76,7 @@ const projects = [
     link: "/MythicEcology",
   },
   {
-    id: 9,
+    id: 10,
     title: "CardioVision",
     description:
       "A real-time cardiovascular risk assessment system using machine learning to ensure accurate, proactive health insights.",
@@ -76,7 +84,7 @@ const projects = [
     link: "/cardiovision",
   },
   {
-    id: 10,
+    id: 11,
     title: "TrustMetrics",
     description:
       "A comprehensive platform for evaluating and improving trustworthiness in digital interactions.",
@@ -84,7 +92,7 @@ const projects = [
     link: "/trustmetrics",
   },
   {
-    id: 11,
+    id: 12,
     title: "Internify",
     description:
       "A CV tracking system for the Faculty of Information Technology at the University of Moratuwa.",
@@ -92,21 +100,21 @@ const projects = [
     link: "/Internify",
   },
   {
-    id: 12,
+    id: 13,
     title: "WelmillaCN Atelier",
     description: "A portfolio website to showcase my projects and skills.",
     image: process.env.PUBLIC_URL + "/images/PortfolioCover.png",
     link: "/atelier",
   },
   {
-    id: 13,
+    id: 14,
     title: "MoveMate",
     description: "A mobile application to explore available flights.",
     image: process.env.PUBLIC_URL + "/images/MoveMateCover.jpg",
     link: "/MoveMate",
   },
   {
-    id: 14,
+    id: 15,
     title: "Lolz",
     description:
       "A mobile application that displays jokes based on the user's selected category, offering a personalized and engaging experience.",

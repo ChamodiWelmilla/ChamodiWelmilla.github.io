@@ -20,6 +20,7 @@ import TrustMetrics from "../components/TrustMetrics";
 import NotFound from "../components/NotFound";
 import CardioVision from "../components/CardioVision";
 import VibeCheck from "../components/VibeCheck";
+import Bidmesh from "../components/Bidmesh";
 
 const AppRoutes = () => {
   return (
@@ -47,6 +48,7 @@ const AppRoutes = () => {
         <Route path="/Lolz" element={<Lolz />} />
         <Route path="/cardiovision" element={<CardioVision />} />
         <Route path="/vibecheck" element={<VibeCheck />} />
+        <Route path="/bidmesh" element={<Bidmesh />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
     </>
