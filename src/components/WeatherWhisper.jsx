@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Row, Col, Container, Button } from "react-bootstrap";
+import { Card, Row, Col, Container } from "react-bootstrap";
 import ReactPlayer from "react-player/youtube";
 
 function WeatherWhisper() {
   const isMobile = window.innerWidth <= 768;
   return (
-    <div
+    <div className="project-page-wrapper" 
       style={{
         overflowX: "hidden",
         minHeight: "100vh",
@@ -189,18 +189,24 @@ function WeatherWhisper() {
               <p style={{ fontSize: "14px" }}>-Demonstration-</p>
             </div>
 
-            <Card.Text style={{ marginBottom: "5%" }}>
-              <span
+            <Card.Text
+              style={{
+                marginTop: "7%",
+                marginBottom: "5%",
+                textAlign: "justify",
+              }}
+            >
+              <div
                 style={{
                   fontSize: "1.5rem",
                   fontWeight: "bold",
                   fontFamily: "'Cinzel Decorative', cursive",
-                  textAlign: "justify",
+                  textAlign: "center",
+                  marginBottom: "1rem",
                 }}
               >
                 Sensors Used
-              </span>
-              <br />
+              </div>
               <span
                 style={{
                   fontSize: "1rem",

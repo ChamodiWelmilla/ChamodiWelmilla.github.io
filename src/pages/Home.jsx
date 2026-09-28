@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Card, Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import TypingEffect from "react-typing-effect";
-import useInView from "./useInView";
+
 import ProjectSection from "../components/ProjectSection";
 import ProjectSectionData from "../data/ProjectSection";
+import About from "./About";
 
 function Home() {
   const typingEffectRef = useRef(null);
@@ -40,7 +41,6 @@ function Home() {
     };
   }, []);
 
-  // Animation effect for middle section
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -48,6 +48,9 @@ function Home() {
           if (entry.isIntersecting) {
             setShowMiddleSection(true);
             setTimeout(() => setMiddleContentVisible(true), 1500);
+          } else {
+            setShowMiddleSection(false);
+            setMiddleContentVisible(false);
           }
         });
       },
@@ -65,7 +68,6 @@ function Home() {
     };
   }, []);
 
-  // Animation effect for projects section
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -73,6 +75,9 @@ function Home() {
           if (entry.isIntersecting) {
             setShowProjects(true);
             setTimeout(() => setProjectsContentVisible(true), 1500);
+          } else {
+            setShowProjects(false);
+            setProjectsContentVisible(false);
           }
         });
       },
@@ -100,6 +105,17 @@ function Home() {
     >
       <style>
         {`
+          @keyframes fadeInSlideRight {
+            from {
+              opacity: 0;
+              transform: translateX(-30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+
           @keyframes zoomIn {
             from {
               transform: scale(1);
@@ -217,14 +233,14 @@ function Home() {
         >
           <Col xs={12} md={6}>
             <img
-              src="/images/HomeMain.png"
+              src="/images/HomeMain.jpg"
               alt="HomeMain"
               style={{
                 width: "100%",
                 maxWidth: isMobile ? "100%" : "80%",
-                marginLeft: isMobile ? "0" : "30%",
+                marginLeft: isMobile ? "0" : "10%",
                 height: "auto",
-                animation: "zoomIn 1.5s ease-out forwards",
+                animation: "fadeInSlideRight 1.5s ease-out forwards",
               }}
             />
           </Col>
@@ -239,7 +255,7 @@ function Home() {
                 color: "#3C3D37",
                 textAlign: "center",
                 width: "100%",
-                marginTop: isMobile ? "-20%" : "30%",
+                marginTop: isMobile ? "-20%" : "10%",
                 marginLeft: isMobile ? "0" : "-10%",
               }}
             >
@@ -302,119 +318,62 @@ function Home() {
                   marginTop: "1rem",
                 }}
               >
-                I aspire to contribute my abilities and innovative projects
-                <br />
-                with like-minded professionals to solve complex problems.
-              </p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-
-      <Container>
-        <Row
-          className="justify-content-center align-items-center py-5 px-4 px-md-5 "
-          style={{ paddingTop: "2rem", paddingBottom: "2rem" }}
-        >
-          <Col xs={12} md={6} className="text-center">
-            <img
-              src="/images/HomeMiddle.gif"
-              alt="HomeMiddle"
-              style={{
-                width: "100%",
-                maxWidth: isMobile ? "80%" : "50%",
-                height: "auto",
-                marginTop: isMobile ? "-30%" : "-5",
-                marginLeft: isMobile ? "0" : "30%",
-              }}
-            />
-          </Col>
-          <Col
-            fluid
-            className="bg-gray-100 py-5 px-4 px-md-5 middle-section"
-            ref={middleSectionRef}
-            xs={12}
-            md={6}
-            style={{
-              animation: isZoomedIn ? "zoomIn 1.5s ease-out forwards" : "",
-              opacity: middleContentVisible ? 1 : 0,
-              transition: "opacity 0.5s ease-in-out",
-            }}
-          >
-            <p
-              style={{
-                fontSize: "1.5rem",
-                fontWeight: "lighter",
-                color: "#3C3D37",
-                textAlign: "center",
-                marginTop: isMobile ? "-7%" : "5%",
-                marginRight: isMobile ? "0" : "20%",
-              }}
-            >
-              <>
-                Need a{" "}
-                <TypingEffect
+                Need a <TypingEffect
                   text={["Designer?", "Full Stack Developer?", "Blog Writer?"]}
                   speed={100}
                   eraseSpeed={50}
                   typingDelay={500}
                   eraseDelay={2000}
                   cursor={"|"}
-                  displayTextRenderer={(text, i) => (
-                    <span
-                      style={{
-                        fontFamily: "'Cinzel Decorative', cursive",
-                        fontWeight: 600,
-                        fontSize: "1.5rem",
-                      }}
-                    >
+                  displayTextRenderer={(text) => (
+                    <span style={{ fontFamily: "'Cinzel Decorative', cursive", fontWeight: 600 }}>
                       {text}
                     </span>
                   )}
-                />
-              </>
-              <br />
-              <span
-                style={{
-                  fontWeight: 500,
-                  fontSize: "1.2rem",
-                  color: "#53667d",
-                }}
-              >
-                I can help you! <br />
-                <div
-                  style={{
-                    fontSize: isMobile ? "14px" : "1rem",
-                    color: "#3C3D37",
-                    fontWeight: "lighter",
-                    lineHeight: "1.5em",
-                  }}
-                >
-                  With a passion for creativity and a focus on delivering
-                  quality results, every project is tailored to meet your
-                  specific needs.
-                  <div style={{ fontWeight: "normal", lineHeight: "2em" }}>
-                    Let's collaborate and turn your ideas into reality!
-                  </div>
-                </div>
-              </span>
-            </p>
+                /><br />
+                I can help you!<br />
+                With a passion for creativity and a focus on delivering quality results, every project is tailored to meet your specific needs.<br />
+                Let's collaborate and turn your ideas into reality!
+              </p>
+            </div>
           </Col>
         </Row>
       </Container>
 
-      <Container
-        fluid
-        className="project-section py-5 text-light"
-        style={{
-          backgroundColor: "#F5EDED",
-          paddingLeft: "5%",
-          paddingRight: "5%",
+      <div 
+        id="about" 
+        style={{ 
+          paddingTop: isMobile ? "5rem" : "4rem", 
+          marginTop: isMobile ? "5rem" : "-3rem" 
         }}
-        ref={projectsSectionRef}
       >
-        <ProjectSection projects={ProjectSectionData} />
-      </Container>
+        <About>
+          <Container
+            id="projects"
+            fluid
+            className="project-section py-5 text-light"
+            style={{
+              backgroundColor: "#F5EDED",
+              paddingLeft: "5%",
+              paddingRight: "5%",
+            }}
+            ref={projectsSectionRef}
+          >
+            <p
+              style={{
+                fontWeight: "semi-bold",
+                fontSize: isMobile ? "24px" : "2rem",
+                color: "#3C3D37",
+                fontFamily: "'Cinzel Decorative', cursive",
+                textAlign: "center",
+              }}
+            >
+              FEATURED PROJECTS
+            </p>
+            <ProjectSection projects={ProjectSectionData} />
+          </Container>
+        </About>
+      </div>
     </div>
   );
 }

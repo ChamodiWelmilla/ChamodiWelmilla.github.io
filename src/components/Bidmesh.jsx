@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
-import ReactPlayer from "react-player/youtube";
+
 
 function Bidmesh() {
   const isMobile = window.innerWidth <= 768;
 
   return (
-    <div
+    <div className="project-page-wrapper" 
       style={{
         overflowX: "hidden",
         minHeight: "100vh",

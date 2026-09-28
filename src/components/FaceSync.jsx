@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Row, Col, Container, Button } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import ReactPlayer from "react-player/youtube";
 
 function FaceSync() {
   const isMobile = window.innerWidth <= 768;
   return (
-    <div
+    <div className="project-page-wrapper" 
       style={{
         overflowX: "hidden",
         minHeight: "100vh",

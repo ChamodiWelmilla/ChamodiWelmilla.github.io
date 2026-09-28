@@ -30,17 +30,17 @@ const ProjectsSection = ({ projects }) => {
   return (
     <Container
       fluid
-      className="project-section py-5 text-light"
+      className="project-section py-0 text-light"
       style={{
-        backgroundColor: "#F5EDED",
-        paddingLeft: "5%",
-        paddingRight: "5%",
+        backgroundColor: "transparent",
+        paddingLeft: "0",
+        paddingRight: "0",
       }}
       ref={projectsSectionRef}
     >
       <Row className="justify-content-center">
         <Col xs={12}>
-          <Row className="g-4 justify-content-center my-5">
+          <Row className="g-4 justify-content-center mt-0 mb-4">
             {projects.map((project) => (
               <Col key={project.id} xs={12} md={6} lg={4}>
                 <Link to={project.link} className="text-decoration-none">
@@ -73,15 +73,23 @@ const ProjectsSection = ({ projects }) => {
             <Col xs="auto">
               <Link to="/projects">
                 <Button
+                  className="project-card"
                   style={{
-                    fontWeight: "initial",
-                    backgroundColor: "#3C3D37",
+                    fontWeight: "bold",
+                    background: "linear-gradient(45deg, #53667d, #3C3D37)",
                     border: "none",
-                    width: "200px",
+                    padding: "0.7rem 4rem",
+                    borderRadius: "30px",
                     fontSize: "1rem",
                   }}
                 >
-                  Find More
+                  <span style={{
+                    background: "linear-gradient(to right, #ffffff 0%, #a0a0a0 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}>
+                    Find More
+                  </span>
                 </Button>
               </Link>
             </Col>

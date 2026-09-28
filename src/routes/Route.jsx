@@ -21,15 +21,14 @@ import NotFound from "../components/NotFound";
 import CardioVision from "../components/CardioVision";
 import VibeCheck from "../components/VibeCheck";
 import Bidmesh from "../components/Bidmesh";
+import MainPage from "../pages/MainPage";
 
 const AppRoutes = () => {
   return (
     <>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/lorryswap" element={<LorrySwap />} />
         <Route path="/weatherwhisper" element={<WeatherWhisper />} />

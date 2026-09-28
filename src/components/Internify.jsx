@@ -1,10 +1,10 @@
 import React from "react";
-import { Card, Row, Col, Container, Button } from "react-bootstrap";
+import { Card, Row, Col, Container } from "react-bootstrap";
 
 function Internify() {
   const isMobile = window.innerWidth <= 768;
   return (
-    <div
+    <div className="project-page-wrapper" 
       style={{
         overflowX: "hidden",
         minHeight: "100vh",

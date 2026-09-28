@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { achievements } from "../data/Achievements";
-import AchievementSection from "../components/Achievements";
+
+import { Container, Row, Col } from "react-bootstrap";
 import ExperienceSection from "../components/ExperienceSection";
 import { experiences } from "../data/Experience";
 
-function About() {
+function About({ children }) {
   const isMobile = window.innerWidth <= 768;
   const rolesRef = useRef(null);
   const [isZoomedIn, setIsZoomedIn] = useState(false);
@@ -44,10 +42,13 @@ function About() {
           if (entry.isIntersecting) {
             entry.target.classList.add("bounce");
             entry.target.style.opacity = 1;
+          } else {
+            entry.target.classList.remove("bounce");
+            entry.target.style.opacity = 0;
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     timelineDots.forEach((dot) => {
@@ -66,10 +67,13 @@ function About() {
           if (entry.isIntersecting) {
             entry.target.classList.add("fade-in");
             entry.target.style.opacity = 1;
+          } else {
+            entry.target.classList.remove("fade-in");
+            entry.target.style.opacity = 0;
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     timelineItems.forEach((item) => {
@@ -91,10 +95,13 @@ function About() {
           if (entry.isIntersecting) {
             entry.target.classList.add("fade-in");
             entry.target.style.opacity = 1;
+          } else {
+            entry.target.classList.remove("fade-in");
+            entry.target.style.opacity = 0;
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     experienceItems.forEach((item) => {
@@ -106,49 +113,90 @@ function About() {
   }, []);
 
   useEffect(() => {
-    const cardRef = document.querySelectorAll(".card-zoom");
+    const box = document.querySelector(".about-content-box");
+    if (!box) return;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsZoomedIn(true);
+            entry.target.classList.add("fade-in");
             entry.target.style.opacity = 1;
+          } else {
+            entry.target.classList.remove("fade-in");
+            entry.target.style.opacity = 0;
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
-
-    cardRef.forEach((ref) => observer.observe(ref));
+    
+    box.style.opacity = 0;
+    observer.observe(box);
 
     return () => observer.disconnect();
   }, []);
 
-  const displayedAchievements = showAll
-    ? achievements
-    : achievements.slice(0, 2);
+  useEffect(() => {
+    const cardRef = document.querySelectorAll(".card-zoom");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let anyIntersecting = false;
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            anyIntersecting = true;
+            entry.target.style.opacity = 1;
+          } else {
+            entry.target.style.opacity = 0;
+          }
+        });
+        
+        setIsZoomedIn(prev => anyIntersecting ? true : false);
+      },
+      { threshold: 0.1 }
+    );
+
+    cardRef.forEach((ref) => {
+      ref.style.opacity = 0;
+      observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <Container fluid className="contact-page" style={{ paddingTop: "3%" }}>
-      <Row style={{ marginBottom: "4%" }}>
-        <Col xs={12} md={6} className="mb-6 mb-md-0">
-          <img
-            src="/images/About.png"
-            alt="artist"
+      <Row 
+        className="justify-content-center" 
+        style={{ 
+          marginLeft: isMobile ? "0" : "8%" 
+        }}
+      >
+        <Col xs={12} md={10}>
+          <p
             style={{
-              width: "100%",
-              maxWidth: isMobile ? "70%" : "80%",
-              height: "auto",
-              marginLeft: isMobile ? "10%" : "25%",
-              paddingLeft: "10%",
-              boxSizing: "border-box",
-              position: "relative",
+              fontWeight: "semi-bold",
+              fontSize: isMobile ? "24px" : "2rem",
+              marginBottom: "2rem",
+              color: "#3C3D37",
+              fontFamily: "'Cinzel Decorative', cursive",
+              textAlign: "center",
             }}
-          />
+          >
+            ABOUT ME
+          </p>
         </Col>
-        <Col xs={12} md={6}>
+      </Row>
+
+      <Row 
+        className="justify-content-center" 
+        style={{ 
+          marginBottom: "4%", 
+          marginLeft: isMobile ? "0" : "8%" 
+        }}
+      >
+        <Col xs={12} md={5}>
           <div
-            className="fade-in"
+            className="mx-auto about-box about-content-box"
             style={{
               fontSize: "2rem",
               color: "#3C3D37",
@@ -159,11 +207,10 @@ function About() {
               padding: "2rem",
               borderRadius: "8px",
               backgroundColor: "rgba(255, 255, 255, 0.8)",
-              maxWidth: "90%",
+              maxWidth: "100%",
               boxSizing: "border-box",
               opacity: "0.9",
-              marginLeft: isMobile ? "6%" : "-10%",
-              marginTop: isMobile ? "-2%" : "37%",
+              marginTop: isMobile ? "0" : "10%",
             }}
           >
             <p
@@ -176,29 +223,14 @@ function About() {
                 alignItems: "center",
               }}
             >
-              A fresh graduate in Software Engineering specializing in backend architecture, distributed systems, and the complete
-SDLC. <br /> Enterprise-proven through hands-on experience at Creative Software building scalable backend architectures and
-robust CI/CD pipelines. <br />  Passionate about clean code, resilient system design, and integrating cutting-edge research and
+              A graduate in Software Engineering specializing in backend architecture, distributed systems, and the complete
+SDLC. <br /><br/> Enterprise-proven through hands-on experience at Creative Software building scalable backend architectures and
+robust CI/CD pipelines. <br /> <br />  Passionate about clean code, resilient system design, and integrating cutting-edge research and
 machine learning to deliver high-quality, production-ready software.
             </p>
           </div>
         </Col>
-      </Row>
-      <div
-        ref={experienceRef}
-        style={{ backgroundColor: "#f8f8f8", padding: "2rem 0" }}
-      >
-        <ExperienceSection isMobile={isMobile} experiences={experiences} />
-      </div>
-      <div>
-        <Row
-          style={{
-            boxSizing: "border-box",
-            marginTop: "2rem",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
+        <Col xs={12} md={5} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <p
             style={{
               fontWeight: "semi-bold",
@@ -221,7 +253,7 @@ machine learning to deliver high-quality, production-ready software.
               position: "relative",
               margin: "0 auto",
               padding: "2rem 0",
-              marginTop: "2rem",
+              marginTop: isMobile ? "2rem" : "3rem",
             }}
           >
             <div
@@ -282,7 +314,7 @@ machine learning to deliver high-quality, production-ready software.
               <div
                 className="col-md-6 col-lg-4 card-zoom"
                 style={{
-                  animation: isZoomedIn ? "zoomIn 1.5s ease-out forwards" : "",
+                  animation: isZoomedIn ? "slideInFromRight 1.5s ease-out forwards" : "",
                   opacity: 0,
                 }}
               >
@@ -329,7 +361,7 @@ machine learning to deliver high-quality, production-ready software.
               <div
                 className="col-md-6 col-lg-4 card-zoom"
                 style={{
-                  animation: isZoomedIn ? "zoomIn 1.5s ease-out forwards" : "",
+                  animation: isZoomedIn ? "slideInFromLeft 1.5s ease-out forwards" : "",
                   opacity: 0,
                 }}
               >
@@ -341,9 +373,9 @@ machine learning to deliver high-quality, production-ready software.
                     width: "100%",
                     maxWidth: "40px",
                     height: "auto",
-                    marginRight: "1rem",
+                    marginRight: "1.5rem",
                     marginTop: isMobile ? "-50%" : "-4%",
-                    marginLeft: isMobile ? "-3%" : "87%",
+                    marginLeft: isMobile ? "-3%" : "40%",
                   }}
                 />
               </div>
@@ -360,21 +392,27 @@ machine learning to deliver high-quality, production-ready software.
                   Devi Balika Vidyalaya
                 </p>
                 <span style={{ fontSize: "12px" }}>
-                  GCE (A/L) 2019 <br /> GCE (O/L) : 2015
+                  GCE (A/L)<br /> GCE (O/L) 
                 </span>
               </div>
             </div>
           </div>
-        </Row>
+        </Col>
+      </Row>
+
+      <div
+        ref={experienceRef}
+        style={{ backgroundColor: "#f8f8f8", padding: "2rem 0", marginBottom: "2rem" }}
+      >
+        <ExperienceSection isMobile={isMobile} experiences={experiences} />
       </div>
-      {/* <div>
-        <AchievementSection displayedAchievements={achievements} />
-      </div>{" "} */}
+
+      {children}
       <div style={{ backgroundColor: "#f8f8f8" }}>
         <p
           style={{
             fontWeight: "semi-bold",
-            fontSize: isMobile ? "24px" : "2rem",
+            fontSize: isMobile ? "20px" : "1.5rem",
             padding: isMobile ? "0 10%" : "0 20%",
             marginTop: "2rem",
             textAlign: "center",
@@ -560,6 +598,12 @@ machine learning to deliver high-quality, production-ready software.
           }
         }
 
+        @media (min-width: 769px) {
+          .education-title {
+            display: none !important;
+          }
+        }
+
         .education-item img {
           transition: transform 0.3s ease-in-out;
         }
@@ -624,6 +668,28 @@ machine learning to deliver high-quality, production-ready software.
           animation: zoomIn 1.5s ease-in-out forwards;
         }
 
+        @keyframes slideInFromRight {
+          0% {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInFromLeft {
+          0% {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
         @keyframes zoomIn {
           0% {
             transform: scale(0);
@@ -649,6 +715,15 @@ machine learning to deliver high-quality, production-ready software.
           transform: scale(1.05);
           color: #53667d;
           transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .about-box {
+          transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .about-box:hover {
+          transform: translateY(-10px);
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15) !important;
         }
       `}</style>{" "}
     </Container>
