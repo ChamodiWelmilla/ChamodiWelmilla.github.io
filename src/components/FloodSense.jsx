@@ -7,6 +7,7 @@ function FloodSense() {
 
   return (
     <div
+      className="project-page-wrapper"
       style={{
         overflowX: "hidden",
         minHeight: "100vh",
