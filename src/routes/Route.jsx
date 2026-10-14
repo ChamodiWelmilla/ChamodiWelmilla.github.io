@@ -21,6 +21,7 @@ import NotFound from "../components/NotFound";
 import CardioVision from "../components/CardioVision";
 import VibeCheck from "../components/VibeCheck";
 import Bidmesh from "../components/Bidmesh";
+import FlowBridge from "../components/FlowBridge";
 import MainPage from "../pages/MainPage";
 
 const AppRoutes = () => {
@@ -48,6 +49,7 @@ const AppRoutes = () => {
         <Route path="/cardiovision" element={<CardioVision />} />
         <Route path="/vibecheck" element={<VibeCheck />} />
         <Route path="/bidmesh" element={<Bidmesh />} />
+        <Route path="/flowbridge" element={<FlowBridge />} />
         <Route path="*" element={<NotFound />} /> 
       </Routes>
     </>

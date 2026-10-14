@@ -1,6 +1,14 @@
 const ProjectSectionData = [
   {
     id: 1,
+    title: "FlowBridge",
+    description:
+      "An event-driven enterprise B2B trade platform designed for asynchronous document processing, fraud prevention, and strict auditability.",
+    image: process.env.PUBLIC_URL + "/images/FlowBridgeCover.png",
+    link: "/flowbridge",
+  },
+  {
+    id: 2,
     title: "Bidmesh",
     description:
       "A highly concurrent, microservices-based online auction platform designed for real-time engagement and strict data consistency.",
@@ -8,21 +16,13 @@ const ProjectSectionData = [
     link: "/bidmesh",
   },
   {
-    id: 2,
+    id: 3,
     title: "Vibecheck",
     description:
       "A deterministic verification framework that automatically audits LLM-generated workflows against formal specifications.",
     image: process.env.PUBLIC_URL + "/images/VibeCheckCover.png",
     link: "/vibecheck",
   }, 
-  {
-    id: 3,
-    title: "FaceSync",
-    description:
-      "An automated attendance system using face recognition to ensure accurate, real‑time identity verification.",
-    image: process.env.PUBLIC_URL + "/images/FaceSyncCover.png",
-    link: "/facesync",
-  },
 ];
 
 export default ProjectSectionData;
