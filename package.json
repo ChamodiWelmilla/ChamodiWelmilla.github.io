@@ -886,6 +886,9 @@
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
